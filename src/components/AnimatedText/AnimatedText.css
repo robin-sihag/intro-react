@@ -1,0 +1,32 @@
+.animated-text-wrapper{
+    color: orange;
+    width: 100%;
+    display: flex;
+    justify-content: center;}
+
+.animated-text{
+    font-size: 2em;
+    text-align: left;
+    font-weight: 900;
+    width: 75%;
+    }
+
+.animated-text:hover{
+    color: yellow !important;
+}
+
+/* .material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' -25,
+  'opsz' 24
+}
+
+.material-symbols-rounded:hover {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' -25,
+    'opsz' 24
+  } */

@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+.main-content-wrapper{
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -23,6 +29,16 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+/* body{
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+} */
 
 .App-link {
   color: #61dafb;
