@@ -1,8 +1,11 @@
 .animated-text-wrapper{
     color: orange;
-    width: 100%;
-    display: flex;
-    justify-content: center;}
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;}
 
 .animated-text{
     font-size: 2em;
@@ -15,18 +18,23 @@
     color: yellow !important;
 }
 
-/* .material-symbols-rounded {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 700,
-  'GRAD' -25,
-  'opsz' 24
-}
 
-.material-symbols-rounded:hover {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 700,
-    'GRAD' -25,
-    'opsz' 24
-  } */
+
+  .jump-on-hover {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .under-con{
+    color: white;
+  display: flex;
+  font-size: .5em;
+  align-self: baseline;
+  padding: 0em 5em;
+  gap: 1em;
+  flex-direction: column;
+  }
+  
+  /* Apply the effect on hover */
+  .jump-on-hover:hover {
+    transform: translateY(-5px); /* Adjust the distance as needed */
+  }

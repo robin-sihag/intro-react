@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./aboutme.css";
+import { InfinitySpin } from 'react-loader-spinner'
+
 import profile_img from "../../assets/profile-img.jpg";
 import {
   faAngular,
@@ -13,9 +15,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const AboutMe = (props) => {
   const IconColor = "#ffd43b";
+  
+  const [showLoading, setShowLoading] = useState(true);
+
+  useEffect(() => {
+    const animationTimeout = setTimeout(() => {
+      setShowLoading(false);
+    }, 2000); 
+
+    return () => clearTimeout(animationTimeout);
+  }, []);
   return (
+
     <>
-      <div className="about-me-wrapper">
+
+
+{showLoading && <div className="loading-animation">      <InfinitySpin color="orange"  />
+</div>}
+      {!showLoading && (
+        <div className="about-me-wrapper">
         <div className="heading">About Me</div>
         <div className="about-me-text">
           <img
@@ -60,6 +78,8 @@ const AboutMe = (props) => {
           realms that life has to offer
         </div>
       </div>
+      )}
+      
     </>
   );
 };

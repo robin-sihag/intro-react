@@ -1,10 +1,21 @@
-import React from "react";
-import "./contactme.css";
+import React, { useState, useEffect } from 'react';import "./contactme.css";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
+import { InfinitySpin } from 'react-loader-spinner'
+import { faL } from '@fortawesome/free-solid-svg-icons';
 
 const ContactMe = (props) => {
   const form = useRef();
+
+  const [showLoading, setShowLoading] = useState(true);
+
+  useEffect(() => {
+    const animationTimeout = setTimeout(() => {
+      setShowLoading(false);
+    }, 2000); 
+
+    return () => clearTimeout(animationTimeout);
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -29,8 +40,60 @@ const ContactMe = (props) => {
   };
 
   return (
+
+
+    
     <>
-      <div className="contact-me-wrapper">
+
+{showLoading && <div className="loading-animation">      <InfinitySpin color="orange"  />
+</div>}
+      {!showLoading && (
+            <div className="contact-me-wrapper">
+            <div className="contact-me-text">
+              Be it about a new opportunity, suggestions for this Application or
+              just a friendly chat, Feel free to reach out.
+              <br /> I like socializing
+            </div>
+            <div className="contact-form">
+              <form className="contact-form-tag" ref={form} onSubmit={sendEmail}>
+                <input
+                  placeholder="Your Name"
+                  type="text"
+                  name="from_name"
+                  required
+                />
+    
+                <input
+                  placeholder="Subject"
+                  type="text"
+                  name="subject"
+                  required
+                />
+                <input
+                  placeholder="Your Email ID"
+                  type="email"
+                  name="from_email"
+                  required
+                />
+                <textarea
+                  placeholder="Your Message"
+                  name="message"
+                  required
+                ></textarea>
+                <button type="submit" value="SEND">SEND</button>
+    
+                
+              </form>
+            </div>
+          </div>
+      )}
+{/* <div>
+      {showAnimation && <div className="animation">Your Animation Goes Here</div>}
+      {redirectTo && <Redirect to="/your-destination" />}
+    </div> */}
+
+
+      {/* <div className="contact-me-wrapper">
         <div className="contact-me-text">
           Be it about a new opportunity, suggestions for this Application or
           just a friendly chat, Feel free to reach out.
@@ -62,13 +125,14 @@ const ContactMe = (props) => {
               name="message"
               required
             ></textarea>
-            {/* <input type="submit" className="flat-button" value="SEND" /> */}
             <button type="submit" value="SEND">SEND</button>
 
             
           </form>
         </div>
-      </div>
+      </div> */}
+      {/* <MutatingDots color="orange" secondaryColor="orange" /> */}
+
     </>
   );
 };

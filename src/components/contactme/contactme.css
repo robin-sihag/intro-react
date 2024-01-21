@@ -1,4 +1,7 @@
 .contact-me-wrapper {
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
   color: orange;
   width: 100%;
   display: flex;
@@ -6,6 +9,13 @@
   flex-direction: column;
   align-items: center;
   gap: 2em;
+}
+
+.loading-animation{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .contact-me-text {
@@ -58,4 +68,12 @@ textarea {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
 }

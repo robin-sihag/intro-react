@@ -29,11 +29,17 @@ const SideNav = (props) => {
         
         </div>
         <div className="personal-links">
-          <a href="">
-            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+        <a
+            href="https://github.com/robin-sihag"
+            target="_blank"
+            rel="noreferrer"
+          >            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
           </a>
-          <a href="">
-            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+          <a
+            href="https://www.linkedin.com/in/robin-sihag-38158b17b/"
+            target="_blank"
+            rel="noreferrer"
+          >            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
           </a>
         </div>
       </div>
