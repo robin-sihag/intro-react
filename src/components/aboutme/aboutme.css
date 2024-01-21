@@ -1,0 +1,56 @@
+.about-me-wrapper {
+  color: orange;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.heading{
+    font-size: 1.5em;
+    color: orange;
+    align-self: flex-start;
+    padding: 0em 2em;
+    font-weight: 900;
+}
+.icons-gallery {
+  font-size: 3em;
+  display: flex;
+  gap: 1.5em;
+}
+
+.closing-text {
+  font-size: 1em;
+  color: white;
+  text-align: initial;
+  font-size: .5em;
+  padding: 0em 10em  ;
+}
+
+.about-me-text {
+  font-size: 1em;
+  text-align: left;
+  font-weight: 600;
+  width: 75%;
+  display: flex;
+  gap: 1em;
+  color: white;
+
+  img {
+    border-radius: 50%;
+  }
+  .desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .5em;
+  }
+}
+
+.about-me-text:hover {
+  color: yellow !important;
+}
