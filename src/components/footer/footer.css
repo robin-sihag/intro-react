@@ -1,0 +1,15 @@
+.under-con {
+  color: white;
+  display: flex;
+  font-size: 0.5em;
+  align-self: baseline;
+  padding: 0em 5em;
+  gap: 1em;
+  background-color: #2D4998;
+}
+.disclaimer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

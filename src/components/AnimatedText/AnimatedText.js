@@ -1,20 +1,53 @@
 import React from "react";
 import "./AnimatedText.css";
-import workinggif from "../../assets/working.gif";
+import { useState, useEffect } from "react";
+import BackgroundAnimation from "../BackgroundAnimation";
+
 const AnimatedText = (props) => {
+  const [line1, setLine1] = useState("");
+  const [line2, setLine2] = useState("");
+  const [line3, setLine3] = useState("");
+
+  const text1 = "Hi,";
+  const text2 = "I'm Robin Sihag";
+  const text3 = "Software Engineer";
+
+  useEffect(() => {
+    const typeLine = (text, setLine) => {
+      for (let i = 0; i <= text.length; i++) {
+        setTimeout(() => {
+          setLine(text.substring(0, i));
+        }, 100 * i);
+      }
+    };
+
+    typeLine(text1, setLine1);
+
+    setTimeout(() => {
+      typeLine(text2, setLine2);
+    }, text1.length * 100);
+
+    setTimeout(() => {
+      typeLine(text3, setLine3);
+    }, (text1.length + text2.length) * 100);
+  }, []);
+
   return (
     <>
+      <div class="bg"></div>
+      <div class="bg bg2"></div>
+      <div class="bg bg3"></div>
+
       <div className="animated-text-wrapper">
         <div className="animated-text jump-on-hover">
-          Hi, <br />
-          I'm Robin Sihag <br />
-          Software Developer <br />
-        </div>
-        <div className="under-con">
-          <img src={workinggif} height={100} width={100}></img>
-          <div className="disclaimer">
-            I know it doesn't look the best, but I am working on it
-          </div>
+          <div>{line1} </div>
+          <div>{line2} </div>
+          <div>{line3} </div>
+
+          <p className="ed-details">
+            VESIT, University of Mumbai
+            <br /> Batch of 2020
+          </p>
         </div>
       </div>
     </>

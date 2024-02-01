@@ -1,4 +1,6 @@
 .contact-me-wrapper {
+  background-color: #EBECF0;
+  height: 100%;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -9,13 +11,112 @@
   flex-direction: column;
   align-items: center;
   gap: 2em;
+
+
+
+  body, html {
+    background-color: #ebecf0 !important;
+  }
+  body, p, input, select, textarea, button {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+  }
+  /* div, p {
+    color: #babecc;
+    text-shadow: 1px 1px 1px #fff;
+  } */
+  form {
+    padding: 16px;
+    margin: 0 auto;
+  }
+  .segment {
+    padding: 32px 0;
+    text-align: center;
+  }
+  button, input ,textarea{
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 320px;
+    padding: 16px;
+    background-color: #EBECF0;
+    text-shadow: 1px 1px 0 #fff;
+  }
+  textarea{
+    border-radius: 25px;
+  }
+  label {
+    display: block;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  input, textarea {
+    margin-right: 8px;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  input,textarea:focus {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  }
+  button {
+    color: #61677c;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  button:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  }
+  button:active {
+    box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+  }
+  button .icon {
+    margin-right: 8px;
+  }
+  button.unit {
+    border-radius: 8px;
+    line-height: 0;
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+    font-size: 19.2px;
+  }
+  button.unit .icon {
+    margin-right: 0;
+  }
+  button.red {
+    display: block;
+    width: 100%;
+    color: orange;
+  }
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .input-group label {
+    margin: 0;
+    flex: 1;
+  }
+  
 }
 
-.loading-animation{
+.loading-animation {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 .contact-me-text {
@@ -24,10 +125,11 @@
   text-align: left;
   font-weight: 900;
   width: 75%;
+  padding: 1em;
 }
 
 .contact-me-text:hover {
-  color: yellow !important;
+  color: white !important;
 }
 
 .contact-form {
@@ -35,45 +137,106 @@
 }
 
 input {
-  background-color: #115173;
+  background-color: #282c34;
   width: 75%;
   padding: 1em;
-  color: white;
+  color: black;
   border: none;
   font-weight: 700;
+  border-bottom: solid 2px white;
 }
+
 button {
   background-color: #115173;
-  /* width: 50%; */
+  border-radius: 8px;
   padding: 1em;
   border: none;
-
+  align-self: flex-end;
   color: white;
   font-weight: 700;
 }
 textarea {
-  background-color: #115173;
+  background-color: #282c34;
   width: 75%;
   padding: 1em;
   border: none;
 
-  color: white;
+  color: black;
   min-height: 10em;
   font-weight: 700;
 }
 
 .contact-form-tag {
   display: flex;
-  gap: 1em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+
+  .form-row{
+    display: flex;
+  gap: 1em;
+  width: 100%;
+  }
 }
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
-   }
+    opacity: 1;
+  }
+}
+
+button:active:after {
+  color: yellow;
+}
+
+.buttons {
+  position: relative;
+  background-color: #115173;
+  border-radius: 4em;
+  /* font-size: 16px; */
+  color: white;
+  padding: 0.8em 1.8em;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.buttons:hover {
+  transition-duration: 0.1s;
+  background-color: #2b91c7;
+}
+
+.buttons:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 10px 40px white;
+}
+
+.buttons:active:after {
+  box-shadow: 0 0 0 0 white;
+  position: absolute;
+  border-radius: 4em;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.buttons:active {
+  top: 1px;
 }

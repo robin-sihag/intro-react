@@ -1,4 +1,7 @@
 .about-me-wrapper {
+  animation: fadeInAnimation ease 3s;
+  background-color: #282c34;
+
   color: orange;
   width: 100%;
   display: flex;
@@ -9,7 +12,9 @@
   justify-content: space-around;
   height: 100%;
 }
-
+.jump-on-hover {
+  transition: transform 0.1s ease-in-out;
+}
 .heading{
     font-size: 1.5em;
     color: orange;
@@ -21,14 +26,17 @@
   font-size: 3em;
   display: flex;
   gap: 1.5em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .closing-text {
   font-size: 1em;
   color: white;
   text-align: initial;
-  font-size: .5em;
+  font-size: .6em;
   padding: 0em 10em  ;
+  font-weight: 100;
 }
 
 .about-me-text {
@@ -54,3 +62,24 @@
 .about-me-text:hover {
   color: yellow !important;
 }
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+}
+
+
+/* @media screen and (max-width: 900px) {
+  body{
+    color: red;
+  }
+  .icons-gallery {
+    flex-direction: column;
+  }
+  .about-me-text:hover {
+    color: red !important;
+  }
+} */

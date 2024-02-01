@@ -13,17 +13,17 @@ const SideNav = (props) => {
   return (
     <>
       <div className="sidenav-wrapper">
-        <div className="navigation-link">
+        <div className="navigation-link ">
 
-        <NavLink exact="true" activeclassname="active" to="/"> 
-        <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+        <NavLink exact="true" className={({isActive}) => isActive ? "active-class": "non-active-class" } to="/"> 
+        <FontAwesomeIcon icon={faHome} className="jump-on-hover"  />
 
         </NavLink>
-        <NavLink exact="true" activeclassname="active" to="/about"> 
-        <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+        <NavLink exact="true" className={({isActive}) => isActive ? "active-class": "non-active-class" } to="/about"> 
+        <FontAwesomeIcon icon={faUser} className="jump-on-hover"  />
 
-        </NavLink><NavLink exact="true" activeclassname="active" to="/contact"> 
-        <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+        </NavLink><NavLink exact="true" className={({isActive}) => isActive ? "active-class": "non-active-class" } to="/contact"> 
+        <FontAwesomeIcon icon={faEnvelope}  className="jump-on-hover" />
 
         </NavLink>
         

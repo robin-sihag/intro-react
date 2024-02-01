@@ -9,7 +9,9 @@
 a {
     padding: 0em 1em;
 }
-
+.jump-on-hover {
+  transition: transform 0.2s ease-in-out;
+}
 .sidenav-wrapper{
     display: flex;
     flex-direction: column;
@@ -39,4 +41,11 @@ a {
     'GRAD' -25,
     'opsz' 24
   }
-  
+  .active-class{
+    /* font-size: 1.2em; */
+    color: yellow !important;
+  }
+
+  .non-active-class{
+    color: #4d4d4e;
+  }
