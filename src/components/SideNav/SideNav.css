@@ -39,3 +39,9 @@ a {
 .non-active-class {
   color: #4d4d4e;
 }
+
+@media only screen and (max-width: 1000px) {
+  .navigation-link {
+    gap: 3em;
+  }
+}

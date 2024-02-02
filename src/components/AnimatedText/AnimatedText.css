@@ -126,3 +126,10 @@ h1 {
     transform: translateX(25%);
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .animated-text {
+    font-size: 2.8em;
+    width: 90%;
+  }
+}

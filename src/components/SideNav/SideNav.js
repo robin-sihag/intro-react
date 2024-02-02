@@ -17,7 +17,7 @@ const SideNav = (props) => {
             }
             to="/"
           >
-            <FontAwesomeIcon icon={faHome} className="jump-on-hover" />
+            <FontAwesomeIcon icon={faHome} className="jump-on-hover"/>
           </NavLink>
           <NavLink
             exact="true"

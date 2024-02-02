@@ -8,7 +8,7 @@ const ContactMe = (props) => {
   const form = useRef();
 
   const [showLoading, setShowLoading] = useState(true);
-
+  const [buttonText, setbuttonText] = useState('Send');
   useEffect(() => {
     const animationTimeout = setTimeout(() => {
       setShowLoading(false);
@@ -29,12 +29,16 @@ const ContactMe = (props) => {
       )
       .then(
         () => {
-          alert("Message successfully sent!");
-          window.location.reload(false);
+          // alert("Message successfully sent!");
+          setbuttonText('Message Sent!')
+          setTimeout(() => {
+            window.location.reload(false);
+          }, 2000);
         },
         (error) => {
           console.log(error.text);
           alert("Failed to send the message, please try again");
+         
         }
       );
   };
@@ -92,7 +96,7 @@ const ContactMe = (props) => {
                 ></textarea>
               </label>
               <button className="red" type="submit" value="SEND">
-                Send
+                {buttonText}
               </button>
             </form>
           </div>
