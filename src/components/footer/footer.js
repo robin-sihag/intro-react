@@ -7,9 +7,9 @@ const Footer = () => {
     <>
       <div className="footer-wrapper">
         <div className="under-con">
-          <img src={workinggif} height={100} width={100}></img>
+          <img src={workinggif} alt="hammer" height={100} width={100}></img>
           <div className="disclaimer">
-          Under construction: Excuse the virtual chaos
+            Under construction: Excuse the virtual chaos
           </div>
         </div>
       </div>

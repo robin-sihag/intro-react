@@ -15,12 +15,12 @@
 .jump-on-hover {
   transition: transform 0.1s ease-in-out;
 }
-.heading{
-    font-size: 1.5em;
-    color: orange;
-    align-self: flex-start;
-    padding: 0em 2em;
-    font-weight: 900;
+.heading {
+  font-size: 1.5em;
+  color: orange;
+  align-self: flex-start;
+  padding: 0em 2em;
+  font-weight: 900;
 }
 .icons-gallery {
   font-size: 3em;
@@ -34,8 +34,8 @@
   font-size: 1em;
   color: white;
   text-align: initial;
-  font-size: .6em;
-  padding: 0em 10em  ;
+  font-size: 0.6em;
+  padding: 0em 10em;
   font-weight: 100;
 }
 
@@ -55,7 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: .5em;
+    font-size: 0.5em;
   }
 }
 
@@ -64,22 +64,10 @@
 }
 @keyframes fadeInAnimation {
   0% {
-      opacity: 0;
+    opacity: 0;
   }
   100% {
-      opacity: 1;
-   }
+    opacity: 1;
+  }
 }
 
-
-/* @media screen and (max-width: 900px) {
-  body{
-    color: red;
-  }
-  .icons-gallery {
-    flex-direction: column;
-  }
-  .about-me-text:hover {
-    color: red !important;
-  }
-} */

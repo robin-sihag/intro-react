@@ -1,5 +1,5 @@
 .contact-me-wrapper {
-  background-color: #EBECF0;
+  background-color: #ebecf0;
   height: 100%;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 1;
@@ -12,13 +12,17 @@
   align-items: center;
   gap: 2em;
 
-
-
-  body, html {
+  body,
+  html {
     background-color: #ebecf0 !important;
   }
-  body, p, input, select, textarea, button {
-    font-family: 'Montserrat', sans-serif;
+  body,
+  p,
+  input,
+  select,
+  textarea,
+  button {
+    font-family: "Montserrat", sans-serif;
     letter-spacing: -0.2px;
     font-size: 16px;
   }
@@ -34,16 +38,18 @@
     padding: 32px 0;
     text-align: center;
   }
-  button, input ,textarea{
+  button,
+  input,
+  textarea {
     border: 0;
     outline: 0;
     font-size: 16px;
     border-radius: 320px;
     padding: 16px;
-    background-color: #EBECF0;
+    background-color: #ebecf0;
     text-shadow: 1px 1px 0 #fff;
   }
-  textarea{
+  textarea {
     border-radius: 25px;
   }
   label {
@@ -51,7 +57,8 @@
     margin-bottom: 24px;
     width: 100%;
   }
-  input, textarea {
+  input,
+  textarea {
     margin-right: 8px;
     box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
     width: 100%;
@@ -60,7 +67,8 @@
     appearance: none;
     -webkit-appearance: none;
   }
-  input,textarea:focus {
+  input,
+  textarea:focus {
     box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
   }
   button {
@@ -108,7 +116,6 @@
     margin: 0;
     flex: 1;
   }
-  
 }
 
 .loading-animation {
@@ -121,7 +128,6 @@
 
 .contact-me-text {
   font-size: 1em;
-  /* color: white; */
   text-align: left;
   font-weight: 900;
   width: 75%;
@@ -172,11 +178,10 @@ textarea {
   justify-content: center;
   align-items: center;
 
-
-  .form-row{
+  .form-row {
     display: flex;
-  gap: 1em;
-  width: 100%;
+    gap: 1em;
+    width: 100%;
   }
 }
 @keyframes fadeInAnimation {
@@ -196,7 +201,6 @@ button:active:after {
   position: relative;
   background-color: #115173;
   border-radius: 4em;
-  /* font-size: 16px; */
   color: white;
   padding: 0.8em 1.8em;
   cursor: pointer;
@@ -205,7 +209,7 @@ button:active:after {
   text-decoration: none;
   cursor: pointer;
   transition-duration: 0.4s;
-  -webkit-transition-duration: 0.4s; /* Safari */
+  -webkit-transition-duration: 0.4s;
 }
 
 .buttons:hover {

@@ -1,7 +1,6 @@
 import React from "react";
 import "./AnimatedText.css";
 import { useState, useEffect } from "react";
-import BackgroundAnimation from "../BackgroundAnimation";
 
 const AnimatedText = (props) => {
   const [line1, setLine1] = useState("");

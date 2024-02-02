@@ -3,7 +3,6 @@ import "./contactme.css";
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import { InfinitySpin } from "react-loader-spinner";
-import { faL } from "@fortawesome/free-solid-svg-icons";
 
 const ContactMe = (props) => {
   const form = useRef();
@@ -55,37 +54,6 @@ const ContactMe = (props) => {
             <br /> I like socializing
           </div>
           <div className="contact-form">
-            {/* <form className="contact-form-tag" ref={form} onSubmit={sendEmail}>
-
-                <input
-                  placeholder="Your Name"
-                  type="text"
-                  name="from_name"
-                  required
-                />
-    
-                <input
-                  placeholder="Subject"
-                  type="text"
-                  name="subject"
-                  required
-                /> 
-               
-                <input
-                  placeholder="Your Email ID"
-                  type="email"
-                  name="from_email"
-                  required
-                />
-                <textarea
-                  placeholder="Your Message"
-                  name="message"
-                  required
-                ></textarea>
-                <button className='buttons' type="submit" value="SEND">SEND</button>
-    
-                
-              </form> */}
             <form className="contact-form-tag" ref={form} onSubmit={sendEmail}>
               <div className="form-row">
                 <label>
@@ -98,7 +66,6 @@ const ContactMe = (props) => {
                 </label>
               </div>
               <div className="form-row">
-                {" "}
                 <label>
                   <input
                     placeholder="Subject"
@@ -124,9 +91,6 @@ const ContactMe = (props) => {
                   required
                 ></textarea>
               </label>
-              {/* <button class="red" type="submit" value="SEND" >
-                <i class="icon ion-md-lock"></i> Send
-              </button> */}
               <button className="red" type="submit" value="SEND">
                 Send
               </button>
@@ -134,50 +98,6 @@ const ContactMe = (props) => {
           </div>
         </div>
       )}
-      {/* <div>
-      {showAnimation && <div className="animation">Your Animation Goes Here</div>}
-      {redirectTo && <Redirect to="/your-destination" />}
-    </div> */}
-
-      {/* <div className="contact-me-wrapper">
-        <div className="contact-me-text">
-          Be it about a new opportunity, suggestions for this Application or
-          just a friendly chat, Feel free to reach out.
-          <br /> I like socializing
-        </div>
-        <div className="contact-form">
-          <form className="contact-form-tag" ref={form} onSubmit={sendEmail}>
-            <input
-              placeholder="Your Name"
-              type="text"
-              name="from_name"
-              required
-            />
-
-            <input
-              placeholder="What is it regarding"
-              type="text"
-              name="subject"
-              required
-            />
-            <input
-              placeholder="Your Email"
-              type="email"
-              name="from_email"
-              required
-            />
-            <textarea
-              placeholder="Your Message"
-              name="message"
-              required
-            ></textarea>
-            <button type="submit" value="SEND">SEND</button>
-
-            
-          </form>
-        </div>
-      </div> */}
-      {/* <MutatingDots color="orange" secondaryColor="orange" /> */}
     </>
   );
 };

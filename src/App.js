@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import AnimatedText from "./components/AnimatedText/AnimatedText";
 import SideNav from "./components/SideNav/SideNav";

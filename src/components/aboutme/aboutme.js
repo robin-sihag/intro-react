@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./aboutme.css";
 import { InfinitySpin } from "react-loader-spinner";
-
 import profile_img from "../../assets/profile-img.jpg";
 import {
   faAngular,
@@ -50,20 +49,38 @@ const AboutMe = (props) => {
             </div>
           </div>
           <div className="icons-gallery">
-            <FontAwesomeIcon className="jump-on-hover" icon={faReact} color={IconColor} />
-            <FontAwesomeIcon className="jump-on-hover" icon={faAngular} color={IconColor} />
-            <FontAwesomeIcon className="jump-on-hover" icon={faNode} color={IconColor} />
-            <FontAwesomeIcon className="jump-on-hover" icon={faHtml5} color={IconColor} />
-            <FontAwesomeIcon className="jump-on-hover" icon={faCss3} color={IconColor} />
-            <FontAwesomeIcon className="jump-on-hover" icon={faJs} color={IconColor} />
+            <FontAwesomeIcon
+              className="jump-on-hover"
+              icon={faReact}
+              color={IconColor}
+            />
+            <FontAwesomeIcon
+              className="jump-on-hover"
+              icon={faAngular}
+              color={IconColor}
+            />
+            <FontAwesomeIcon
+              className="jump-on-hover"
+              icon={faNode}
+              color={IconColor}
+            />
+            <FontAwesomeIcon
+              className="jump-on-hover"
+              icon={faHtml5}
+              color={IconColor}
+            />
+            <FontAwesomeIcon
+              className="jump-on-hover"
+              icon={faCss3}
+              color={IconColor}
+            />
+            <FontAwesomeIcon
+              className="jump-on-hover"
+              icon={faJs}
+              color={IconColor}
+            />
           </div>
           <div className="closing-text">
-            {/* I'm quiet confident, naturally curious, and perpetually working on
-          improving my chops one problem at a time.
-          <br />
-          If I need to define myself in one sentence that would be a marvel fan,
-          a sports fanatic, and tech-obsessed.
-          <br /> */}
             I am always learning new things to grow this little list of mine.
             Motivation to do that? Well i just like to know how things work
             <br />
