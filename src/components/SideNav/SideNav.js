@@ -40,7 +40,7 @@ const SideNav = (props) => {
         </div>
         <div className="personal-links">
           <a
-            href="https://github.com/robin-sihag"
+            // href="https://github.com/robin-sihag"
             target="_blank"
             rel="noreferrer"
           >
